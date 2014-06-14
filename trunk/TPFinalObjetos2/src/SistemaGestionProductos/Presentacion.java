@@ -12,6 +12,11 @@ public class Presentacion {
 	Producto producto;
 	ArrayList<Double>precioHistorico = new ArrayList<Double>();
 	
+	public double getPrecioVenta() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
 
 	
 }
