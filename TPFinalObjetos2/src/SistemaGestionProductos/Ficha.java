@@ -1,5 +1,5 @@
 package SistemaGestionProductos;
-
+//
 public class Ficha {
 	
 	public Presentacion getObjeto() {
