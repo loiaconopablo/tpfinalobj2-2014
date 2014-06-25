@@ -2,24 +2,26 @@ package SistemaGestionProductos;
 //
 public class Ficha {
 	
-	public Presentacion getObjeto() {
-		return objeto;
-	}
+	private Presentacion objeto;
+	private int cantidad;
+
 
 	public Ficha(Presentacion objeto, int cantidad) {
 		this.setCantidad(cantidad);
 		this.setObjeto(objeto);
+	}	
+
+	public Presentacion getObjeto() {
+		return objeto;
 	}
-
-	
-
 	public double precio(){
 		return 	this.getCantidad()*this.getObjeto().getPrecioVenta();
 	}
 	
 	public void descontarCant(int cantidad2) {
-		// TODO Auto-generated method stub
-		
+		this.setCantidad(this.getCantidad()- cantidad2);
+		// hay que ver si hacemos que devuelva una excepcion o suponemos que la cantidad a descontar siempre es menor,
+		// aunque es medio moncho hacer eso ja
 	}
 
 	public boolean tienePresentacion(Presentacion presentacion){
@@ -38,8 +40,6 @@ public class Ficha {
 		this.cantidad = cantidad;
 	}
 
-	private Presentacion objeto;
-	private int cantidad;
 		
 
 }
