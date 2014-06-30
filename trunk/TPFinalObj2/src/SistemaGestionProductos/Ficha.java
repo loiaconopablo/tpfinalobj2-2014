@@ -18,6 +18,10 @@ public class Ficha {
 		return 	this.getCantidad()*this.getPresentacion().getPrecioVenta();
 	}
 	
+	public void aumentarCant(int cantidad){
+		this.setCantidad(this.getCantidad()+ cantidad);
+	}
+	
 	public void descontarCant(int cantidad2) {
 		this.setCantidad(this.getCantidad()- cantidad2);
 		// hay que ver si hacemos que devuelva una excepcion o suponemos que la cantidad a descontar siempre es menor,
@@ -38,6 +42,11 @@ public class Ficha {
 	
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
+	}
+
+	public boolean verificarCantidadPresentacion(Ficha ficha) {
+		// TODO Auto-generated method stub
+		return this.getCantidad()>ficha.getCantidad();
 	}
 
 		

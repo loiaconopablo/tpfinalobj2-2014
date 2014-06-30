@@ -65,5 +65,9 @@ public class Pedido {
 	public void setFichas(List<Ficha> fichas) {
 		this.fichas = fichas;
 	}
-
+	
+	public Ficha buscarFicha(Ficha ficha){
+		return this.getFichas().get(getFichas().indexOf(ficha));
+		
+	}
 }
