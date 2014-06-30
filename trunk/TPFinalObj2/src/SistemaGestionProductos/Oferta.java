@@ -1,5 +1,5 @@
 package SistemaGestionProductos;
 
-public class Cliente {
+public class Oferta {
 
 }

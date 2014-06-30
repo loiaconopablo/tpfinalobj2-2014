@@ -11,11 +11,11 @@ public class Ficha {
 		this.setObjeto(objeto);
 	}	
 
-	public Presentacion getObjeto() {
+	public Presentacion getPresentacion() {
 		return objeto;
 	}
 	public double precio(){
-		return 	this.getCantidad()*this.getObjeto().getPrecioVenta();
+		return 	this.getCantidad()*this.getPresentacion().getPrecioVenta();
 	}
 	
 	public void descontarCant(int cantidad2) {
