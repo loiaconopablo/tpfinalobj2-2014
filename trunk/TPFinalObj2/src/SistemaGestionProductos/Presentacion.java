@@ -1,34 +1,36 @@
 package SistemaGestionProductos;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Presentacion {
-	
+	private Integer cantDeUnidadDeMedida;
 	private String codDebarras;
 	private int stockMinimo;
 	private int stockCritico;
 	private double precioVenta;
 	private double precioCompra;
 	private Producto producto;
-	private ArrayList<Double>precioHistorico = new ArrayList<Double>();
+	private List<Double>precioHistorico ;
 	
-	public Presentacion(String codDeBarras, int stockMin, int StockCri, double precioVta, double precioCmp, Producto produc){
+	public Presentacion(String codDeBarras, int stockMin, int StockCri, double precioVta, double precioCmp, Producto produc,Integer cantDeUnidadDeMedida){
 		this.setCodDebarras(codDeBarras);
+		this.setCantDeUnidadDeMedida(cantDeUnidadDeMedida);
 		this.setStockMinimo(stockMin);
 		this.setStockCritico(StockCri);
 		this.setPrecioVenta(precioVta);
 		this.setPrecioCompra(precioCmp);
 		this.setProducto(produc);
+		this.setPrecioHistorico(new ArrayList<Double>());
 		this.precioHistorico.add(this.getPrecioVenta());
+		produc.agregarPresentacion(this);
 	}
 	
 	
-	public boolean soyDelTipoDeProcuto(Producto producto){
+	public boolean soyDelTipoDeProducto(Producto producto){
 		
-		if(producto.getClass()== this.getProducto().getClass())
-			{return true;}
-		else {return false;}
-		
+		return (producto.equals(this.getProducto()));
+			
 	}
 	
 	public void cambiarPrecioDeVenta(double precioNuevo){
@@ -82,7 +84,7 @@ public class Presentacion {
 		this.producto = producto;
 	}
 
-	public ArrayList<Double> getPrecioHistorico() {
+	public List<Double> getPrecioHistorico() {
 		return precioHistorico;
 	}
 
@@ -92,6 +94,16 @@ public class Presentacion {
 
 	public void setPrecioVenta(double precioVenta) {
 		this.precioVenta = precioVenta;
+	}
+
+
+	public Integer getCantDeUnidadDeMedida() {
+		return cantDeUnidadDeMedida;
+	}
+
+
+	public void setCantDeUnidadDeMedida(Integer cantDeUnidadDeMedida) {
+		this.cantDeUnidadDeMedida = cantDeUnidadDeMedida;
 	}
 
 

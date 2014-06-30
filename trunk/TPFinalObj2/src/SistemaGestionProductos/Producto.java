@@ -7,21 +7,21 @@ public class Producto {
 	
 	private String descripcion;
 	private String nombre;
-	private ArrayList<Presentacion> presentaciones = new ArrayList<Presentacion>();
+	private ArrayList<Presentacion> presentaciones ;
 	private String tipo;
 	private String unidadMedida;
 	private String marca;
 
 	
-	public Producto (String descrip, String nom, ArrayList<Presentacion> presen, String tipo, String unidadMedida){
-		
-		this.descripcion = descrip; 
-		this.nombre = nom;
-		this.presentaciones = presen;
-		this.tipo = tipo;
-		this.unidadMedida = unidadMedida;
+	public Producto (String descrip, String nom, String tipo, String unidadMedida,String marca){
+		// Inicializo la lista vacia de presentaciones.
+		this.setDescripcion(descrip); 
+		this.setNombre (nom);
+		this.setPresentaciones (new ArrayList<Presentacion>());
+		this.setTipo(tipo);
+		this.setUnidadMedida(unidadMedida);
+		this.setMarca(marca);
 	}
-	
 	
 //////////////////////////getters&setters////////////////////////////////////
 	public String getDescripcion() {
@@ -63,6 +63,11 @@ public class Producto {
 	private void setUnidadMedida(String unidadMedida) {
 		this.unidadMedida = unidadMedida;
 	}
+	
+	private void setMarca(String marca2) {
+		this.marca=marca2 ;
+	}	
+		
 
 	
 ///////////////////////////////////////////////////////////////////////////////////	
@@ -85,6 +90,11 @@ public class Producto {
 	public void quitarPresentacion(Presentacion p){
 		
 		this.presentaciones.remove(p);
+	}
+
+	public String getMarca() {
+		// TODO Auto-generated method stub
+		return this.marca;
 	}
 }
 
