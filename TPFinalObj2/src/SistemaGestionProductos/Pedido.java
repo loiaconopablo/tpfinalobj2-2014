@@ -15,6 +15,9 @@ public class Pedido {
 		this.setFichas(listaFichas);
 
 	}
+	public void agregarFichaAlPedido(Ficha ficha){
+		this.fichas.add(ficha);
+	}
 
 	public void agregarPresentacionAlPedido(Presentacion objeto, int cantidad) {
 		Ficha ficha = new Ficha(objeto, cantidad);

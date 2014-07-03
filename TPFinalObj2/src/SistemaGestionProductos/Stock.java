@@ -18,6 +18,53 @@ public class Stock {
 		}
 
 	
+	public void retornarPedidoAlStock(Pedido pedido){
+		this.agregarPedidoAlStock(pedido);
+	}
+	
+	private void agregarPedidoAlStock(Pedido pedido) {
+		for(Ficha ficha : pedido.getFichas()){
+			this.agregarFichaAlStock(ficha);
+		}
+	}
+
+	public Pedido generarPedidoEnStock(Pedido pedido){
+		Pedido result = new Pedido();
+		for( Ficha ficha : pedido.getFichas()){
+			if(this.hayStock(ficha)){
+				pedido.agregarFichaAlPedido(ficha);
+			}
+		}
+		return result;
+	}
+	
+	public Pedido generarPedidoSinStock(Pedido pedido){
+		Pedido result = new Pedido();
+		for( Ficha ficha : pedido.getFichas()){
+			if(!this.hayStock(ficha)){
+				pedido.agregarFichaAlPedido(ficha);
+			}
+		}
+		return result;
+	}
+	public Pedido generarPresentacionesEnEstadoCritico(){
+		Pedido result = new Pedido();
+		for(Ficha ficha : this.getFichas()){
+			if(ficha.getCantidad()<ficha.getPresentacion().getStockCritico())
+				result.agregarFichaAlPedido(ficha);
+		}
+		return result;
+	}
+	
+	public Pedido generarPresentacionesEnEstadoMinimo(){
+		Pedido result = new Pedido();
+		for(Ficha ficha : this.getFichas()){
+			if(ficha.getCantidad()<ficha.getPresentacion().getStockMinimo())
+				result.agregarFichaAlPedido(ficha);
+		}
+		return result;
+	}
+	
 	private boolean contienePresentencion(Ficha ficha) {
 		boolean result = false;
 		for(Ficha fic : this.getFichas()){
@@ -53,11 +100,8 @@ public class Stock {
 	}
 
 
-	public void agregarPedidoAlStock(Pedido pedido){
-		
-	}
 	
-	private void descontarPedidoDelStock(Pedido pedido) throws NoPuedeDescontarException{
+	public void descontarPedidoDelStock(Pedido pedido) throws NoPuedeDescontarException{
 		//llama a verificar stock, si hay stock , hacer el for llamando descontarFicha
 		//sino hay......
 		//descuenta 
