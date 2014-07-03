@@ -1,6 +1,7 @@
 package SistemaGestionProductos;
 
 import SistemaGestionProductos.Ficha;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,48 +11,79 @@ public class Stock {
 	
 	//chequea si la ficha esta,si esta, aumenta la cantidad, sino esta agrega la ficha a la lista.
 	public void agregarFichaAlStock(Ficha ficha){
-		if(getFichas().contains(ficha)){
-			ficha.aumentarCant(ficha.getCantidad());
+		if(this.contienePresentencion(ficha)){
+			this.buscarYDevolverFicha(ficha).aumentarCant(ficha.getCantidad());
 		}
+			this.getFichas().add(ficha);
+		}
+
+	
+	private boolean contienePresentencion(Ficha ficha) {
+		boolean result = false;
+		for(Ficha fic : this.getFichas()){
+			if(	fic.getPresentacion() == ficha.getPresentacion()){
+				result = true;
+				break;}
+			}
+		return result;
+	}
+	
+	public boolean hayStock(Ficha ficha){
+		if(this.contienePresentencion(ficha)&&
+				this.buscarYDevolverFicha(ficha).getCantidad()>= ficha.getCantidad()){
+			return true;}
 		else{
-			getFichas().add(ficha);
+			return false;
 		}
 	}
 
-	
+
 	public void descontarFichaAlStock(Ficha ficha){
-		this.buscarFicha(ficha).descontarCant(ficha.getCantidad()); //hay que resolver esto....
+		this.buscarYDevolverFicha(ficha).descontarCant(ficha.getCantidad()); 
 	}
 	
+	private Ficha buscarYDevolverFicha(Ficha ficha) {
+		Ficha fichaEncontrada = null;
+		for(Ficha fic : this.getFichas()){
+			if(	fic.getPresentacion() == ficha.getPresentacion()){
+				fichaEncontrada = fic;
+				break;}
+			}
+		return fichaEncontrada;
+	}
+
+
 	public void agregarPedidoAlStock(Pedido pedido){
 		
 	}
 	
-	private void descontarPedidoDelStock(Pedido pedido){
-		
+	private void descontarPedidoDelStock(Pedido pedido) throws NoPuedeDescontarException{
 		//llama a verificar stock, si hay stock , hacer el for llamando descontarFicha
 		//sino hay......
 		//descuenta 
-		List<Ficha>fichas = this.getFichas();
+		List<Ficha>fichas = pedido.getFichas();
 		if(verificarStock(pedido)){
 			for (Ficha ficha : fichas ) {
 				this.descontarFichaAlStock(ficha);
-			}
+			}}
 			else{
+				throw new NoPuedeDescontarException();
 				//deberia lanzar una excepcion... conversar si deberia llamar
 				//aca mismo a los metodos-generarPedidoEnStock() o 
 				//-generarPedidoSinStock.
 			}	
 		}
 		
-	}
 	
 	private boolean verificarStock(Pedido pedido) {
-		List<Ficha>fichas = pedido.getFichas();
-		while(pedido.getFichas().buscarFicha().verificarCantidadPresentacion()==true){//hay que resolver como hacerlo....
-			return true;
+		boolean result = true;
+		for( Ficha ficha : pedido.getFichas()){
+			if(!this.hayStock(ficha)){
+				result = false; 
+				break;
+			}
 		}
-		return false;
+		return result;
 	}
 
 	public List<Ficha> getFichas() {

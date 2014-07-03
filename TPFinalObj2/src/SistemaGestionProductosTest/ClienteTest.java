@@ -1,9 +1,11 @@
-package SistemaGestionProductos;
+package SistemaGestionProductosTest;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import SistemaGestionProductos.Cliente;
 
 public class ClienteTest {
 	Cliente aux;
