@@ -34,7 +34,7 @@ public class Pedido {
 			throws NoPuedeDescontarException {
 		boolean result = false;
 		for (Ficha fichaInterna : this.getFichas()) {
-			if (fichaInterna.getObjeto() == ficha.getObjeto()
+			if (fichaInterna.getPresentacion() == ficha.getPresentacion()
 					& fichaInterna.getCantidad() >= ficha.getCantidad()) {
 				result = true;
 			}
@@ -50,7 +50,7 @@ public class Pedido {
 		Ficha result = null;
 		if (this.puedeDescontar(fichaPedido)) {
 			for (Ficha ficha : this.getFichas()) {
-				if (ficha.getObjeto() == fichaPedido.getObjeto()) {
+				if (ficha.getPresentacion() == fichaPedido.getPresentacion()) {
 					result = ficha;
 				}
 			}
