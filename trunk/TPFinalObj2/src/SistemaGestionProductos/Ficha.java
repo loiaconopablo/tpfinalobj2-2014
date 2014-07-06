@@ -40,7 +40,7 @@ public class Ficha {
 		return cantidad;
 	}
 	
-	public void setCantidad(int cantidad) {
+	private void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
 
