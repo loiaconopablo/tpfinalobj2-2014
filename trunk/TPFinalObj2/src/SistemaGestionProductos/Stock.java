@@ -121,7 +121,7 @@ public class Stock {
 		}
 		
 	
-	private boolean verificarStock(Pedido pedido) {
+	public boolean verificarStock(Pedido pedido) {
 		boolean result = true;
 		for( Ficha ficha : pedido.getFichas()){
 			if(!this.hayStock(ficha)){
