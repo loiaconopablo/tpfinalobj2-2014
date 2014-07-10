@@ -16,7 +16,7 @@ public class Pedido {
 
 	}
 	public void agregarFichaAlPedido(Ficha ficha){
-		this.fichas.add(ficha);
+		this.fichas.add(ficha);//revisar
 	}
 
 	public void agregarPresentacionAlPedido(Presentacion objeto, int cantidad) {

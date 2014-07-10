@@ -2,16 +2,14 @@ package SistemaGestionProductos;
 
 public class VentaDirecta extends Venta {
 
-	public Venta generarVenta(Pedido p) {
-		// TODO Auto-generated method stub
-		return null;
-		
+	public VentaDirecta(Pedido p, Cliente c) {
+		this.pedido = p;
+		this.cliente = c;
 	}
+
+	public VentaDirecta(Pedido p) {
+		this.pedido = p;
+	}
+
 	
-	@Override
-	public VentaDirecta generarVenta(Cliente c, Pedido p) {
-		// TODO Auto-generated method stub
-		
-		return null;
-	}
 }
