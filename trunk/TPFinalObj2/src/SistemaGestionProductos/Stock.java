@@ -14,15 +14,17 @@ public class Stock {
 		if(this.contienePresentencion(ficha)){
 			this.buscarYDevolverFicha(ficha).aumentarCant(ficha.getCantidad());
 		}
+		else{
 			this.getFichas().add(ficha);
 		}
+	}
 
 	
 	public void retornarPedidoAlStock(Pedido pedido){
 		this.agregarPedidoAlStock(pedido);
 	}
 	
-	private void agregarPedidoAlStock(Pedido pedido) {
+	public void agregarPedidoAlStock(Pedido pedido) {
 		for(Ficha ficha : pedido.getFichas()){
 			this.agregarFichaAlStock(ficha);
 		}
@@ -137,5 +139,5 @@ public class Stock {
 	public void setFichas(List<Ficha> fichas) {
 		this.fichas = fichas;
 	}
-
+	
 }

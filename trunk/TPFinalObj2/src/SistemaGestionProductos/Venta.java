@@ -4,10 +4,28 @@ import java.util.Date;
 
 public abstract class Venta {
 	
-	private Cliente cliente;
-	private Date fechaDeVenta;
-	private Pedido pedido;
+	protected Cliente cliente;
+	protected Date fechaDeVenta;
+	protected Pedido pedido;
 	
-	public abstract Venta generarVenta(Cliente c, Pedido p);
-
+	public Cliente getCliente() {
+		return cliente;
+	}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+	public Date getFechaDeVenta() {
+		return fechaDeVenta;
+	}
+	public void setFechaDeVenta(Date fechaDeVenta) {
+		this.fechaDeVenta = fechaDeVenta;
+	}
+	public Pedido getPedido() {
+		return pedido;
+	}
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
+	}
+	
+	
 }

@@ -18,8 +18,9 @@ public class CuentaCorriente {
 	}
 	
 	public void actualizarCC(Pedido pedido) {
-		// TODO Auto-generated method stub
-		
+		for (Ficha ficha : pedido.getFichas()) {
+			pedido.agregarFichaAlPedido(ficha);
+		}
 	}
 
 	
