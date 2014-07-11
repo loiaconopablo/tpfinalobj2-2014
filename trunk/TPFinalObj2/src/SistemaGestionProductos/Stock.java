@@ -19,11 +19,6 @@ public class Stock {
 		}
 	}
 
-	public double aplicarDescuentoDeOfertaAlPedido(Pedido ped) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
 	public void retornarPedidoAlStock(Pedido pedido){
 		this.agregarPedidoAlStock(pedido);
 	}
@@ -53,20 +48,20 @@ public class Stock {
 		}
 		return result;
 	}
-	public Pedido generarPresentacionesEnEstadoCritico(){
-		Pedido result = new Pedido();
+	public List<Presentacion> generarPresentacionesEnEstadoCritico(){
+		List<Presentacion> result = new ArrayList<Presentacion>();
 		for(Ficha ficha : this.getFichas()){
 			if(ficha.getCantidad()<ficha.getPresentacion().getStockCritico())
-				result.agregarFichaAlPedido(ficha);
+				result.add(ficha.getPresentacion());
 		}
 		return result;
 	}
 	
-	public Pedido generarPresentacionesEnEstadoMinimo(){
-		Pedido result = new Pedido();
+	public List<Presentacion> generarPresentacionesEnEstadoMinimo(){
+		List<Presentacion> result = new ArrayList<Presentacion>();
 		for(Ficha ficha : this.getFichas()){
 			if(ficha.getCantidad()<ficha.getPresentacion().getStockMinimo())
-				result.agregarFichaAlPedido(ficha);
+				result.add(ficha.getPresentacion());
 		}
 		return result;
 	}

@@ -1,10 +1,14 @@
 package SistemaGestionProductos;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 public class Sucursal {
 
+	private SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 	private Stock stock;
 	private int idSucursal;
 	private List<Ubicacion>ubicaciones = new ArrayList<Ubicacion>();
@@ -45,11 +49,17 @@ public class Sucursal {
 		this.getHistorialDeVentas().remove(venta);
 	}
 
-	public double aplicarDescuentoDeOfertas(Pedido ped) {
-		double acobrar = this.getStock().aplicarDescuentoDeOfertaAlPedido(ped);
-		return acobrar;
+	public void aplicarDescuentoDeOfertas(Pedido ped) {
+		if(this.hayOfertas()){
+		for(Oferta ofer :this.getOfertas())
+			{ofer.aplicarDescuentos(ped);}
+		}
 	}
 	
+	private boolean hayOfertas() {
+		return this.getOfertas().size()>0;
+	}
+
 	public void efectuarVentaComun(Pedido pedido, Cliente cliente) throws NoPuedeDescontarException{
 		this.aplicarDescuentoDeOfertas(pedido);
 		VentaDirecta venta = new VentaDirecta(cliente,pedido);
@@ -79,6 +89,38 @@ public class Sucursal {
 	
 	public void efectuarVentaADomicilio(Pedido p, Cliente c){
 		//Aca tiene que ir la logica de los envios y demas
+	}
+	
+	public List<Venta> generarListadoVenta(Date desde, Date hasta) {
+		List<Venta>result = new ArrayList<Venta>();
+		for(Venta vent : this.getHistorialDeVentas())
+		{if(vent.getFechaDeVenta().after(desde) && vent.getFechaDeVenta().before(hasta))
+			result.add(vent);}
+	return result;
+	}
+	
+	public List<Venta> generarListadoVenta(Date fecha) {
+		List<Venta>result = new ArrayList<Venta>();
+		for(Venta vent : this.getHistorialDeVentas())
+		{if(format.format(vent.getFechaDeVenta()) == format.format(fecha))
+			result.add(vent);}
+	return result;
+	}
+
+	public List<Venta> generarListadoVenta(double desde,double hasta) {
+		List<Venta>result = new ArrayList<Venta>();
+		for(Venta vent : this.getHistorialDeVentas())
+		{if(vent.getPedido().getPrecio()>=desde && vent.getPedido().getPrecio()<= hasta)
+			result.add(vent);}
+	return result;
+	}
+	
+	public List<Presentacion> generarListadoPresentacionStockMinimo(){
+		return this.getStock().generarPresentacionesEnEstadoMinimo();
+	}
+	
+	public List<Presentacion> generarListadoPresentacionStockCritico(){
+		return this.getStock().generarPresentacionesEnEstadoCritico();
 	}
 	
 	public void reponerStock(Pedido pedido){
@@ -146,5 +188,20 @@ public class Sucursal {
 	public void setHistorialDeVentas(List<Venta> historialDeVentas) {
 		this.historialDeVentas = historialDeVentas;
 	}
+
+	
+//	PARA COMPARAR FECHAS
+//	public static void main(String[] args) throws InterruptedException {
+//	    
+//	    SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+//	    Date a = new Date();
+//	    Thread.sleep(1000);
+//	    Date b = new Date();
+//	    boolean sas = ((format.format(a)).equalsIgnoreCase((format.format(b))));
+//	    System.out.println(format.format(a));
+//	    System.out.println(format.format(b));
+//	    System.out.println(sas);
+//	    
+//	  }
 	
 }

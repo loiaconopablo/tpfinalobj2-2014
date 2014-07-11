@@ -14,7 +14,7 @@ public class Pedido {
 	public double getPrecio() {
 		double result = 0;
 		for(Ficha ficha :this.getFichas()){
-			result += ficha.precio();
+			result += ficha.getPrecio();
 		}
 		return result;
 	}
