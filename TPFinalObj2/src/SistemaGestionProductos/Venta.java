@@ -33,5 +33,10 @@ public abstract class Venta {
 		this.pedido = pedido;
 	}
 
+	public Double debePagarDiferencia() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

@@ -37,6 +37,10 @@ public class Presentacion {
 		this.setPrecioVenta(precioNuevo);
 	}
 	
+	public boolean equals(Presentacion presentacion){
+		return this.getCodDebarras().equals(presentacion.getCodDebarras());
+	}
+	
 	
 	// ACCESORS
 	
