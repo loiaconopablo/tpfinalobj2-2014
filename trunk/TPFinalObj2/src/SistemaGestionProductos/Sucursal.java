@@ -11,7 +11,8 @@ public class Sucursal {
 	private List<Oferta>ofertas;
 	private List<Venta> historialDeVentas;
 	private Negocio negocio;
-	
+	private double caja;
+
 	public Sucursal(int id, List<Ubicacion>ubicaciones, Negocio negocio){
 		
 		this.setNegocio(negocio);
@@ -20,6 +21,7 @@ public class Sucursal {
 		this.ubicaciones = ubicaciones;
 		this.setOfertas(new ArrayList<Oferta>());
 		this.setHistorialDeVentas(new ArrayList<Venta>());
+		this.setCaja(0);
 	}
 
 	public void agregarMercaderiaALaSucursal(Pedido pedido){
@@ -28,34 +30,55 @@ public class Sucursal {
 	public void nuevoCliente(String nombreCl,  int dni, String direccion){
 		this.getNegocio().nuevoCliente(nombreCl, dni, direccion);
 	}
+	
+	public void cobrarPedido(double precio){
+		this.setCaja(this.getCaja()+precio);
+	}
+	
+	public void efectuarDevolucion(Cliente client, Venta venta){
+		this.cancelarVenta(venta);
+		this.agregarMercaderiaALaSucursal(venta.getPedido());
+		client.efectuarDevolucionYcancelarCompra(venta);
+	}
 
+	private void cancelarVenta(Venta venta) {
+		this.getHistorialDeVentas().remove(venta);
+	}
+
+	public double aplicarDescuentoDeOfertas(Pedido ped) {
+		double acobrar = this.getStock().aplicarDescuentoDeOfertaAlPedido(ped);
+		return acobrar;
+	}
+	
 	public void efectuarVentaComun(Pedido pedido, Cliente cliente) throws NoPuedeDescontarException{
+		this.aplicarDescuentoDeOfertas(pedido);
 		VentaDirecta venta = new VentaDirecta(cliente,pedido);
 		this.getHistorialDeVentas().add(venta);
 		//SE SUPONE QUE SIEMPRE HAY STOCK
 		this.getStock().descontarPedidoDelStock(pedido);
 		cliente.getHistorialCompras().add(venta);
+		this.cobrarPedido(pedido.getPrecio());
 	}
-	
+
 	public void efectuarVentaComun(Pedido pedido) throws NoPuedeDescontarException{
+		this.aplicarDescuentoDeOfertas(pedido);
 		VentaDirecta venta = new VentaDirecta(this.getNegocio().getUserGenerico(),pedido);
 		this.getHistorialDeVentas().add(venta);
 		//SE SUPONE QUE SIEMPRE HAY STOCK
 		this.getStock().descontarPedidoDelStock(pedido);
 		this.getNegocio().getUserGenerico().getHistorialCompras().add(venta);
+		this.cobrarPedido(pedido.getPrecio());
 	}
 	
-	
-	public void efectuarVentaCC(Pedido pedido, Cliente c){
-		VentaCC venta = new VentaCC(pedido, c);
+	public void efectuarVentaCC(Pedido pedido, Cliente cliente){
+		this.aplicarDescuentoDeOfertas(pedido);
+		VentaCC venta = new VentaCC(cliente, pedido);
 		this.getHistorialDeVentas().add(venta);
-		c.getHistorialCompras().add(venta);
-		//falta hacer metodo para agregar el pedido a la cuenta corriente, y ademas hacer el descuento del monto a la cuenta
-		
+		cliente.getHistorialCompras().add(venta);		
 	}
 	
 	public void efectuarVentaADomicilio(Pedido p, Cliente c){
-		
+		//Aca tiene que ir la logica de los envios y demas
 	}
 	
 	public void reponerStock(Pedido pedido){
@@ -63,7 +86,6 @@ public class Sucursal {
 	}
 	
 	public void agregarPresentaciones(Presentacion presen, int cant, Ubicacion u ){
-		//hay que cambiar el nombre de este metodo, ya que agrega fichas al stock, no presentaciones como dice el UML.
 		Ficha ficha = new Ficha(presen, cant);
 		this.getStock().agregarFichaAlStock(ficha);
 	}
@@ -75,6 +97,14 @@ public class Sucursal {
 
 	public void setNegocio(Negocio negocio) {
 		this.negocio = negocio;
+	}
+	
+	public double getCaja() {
+		return caja;
+	}
+
+	public void setCaja(double caja) {
+		this.caja = caja;
 	}
 
 	public Stock getStock() {

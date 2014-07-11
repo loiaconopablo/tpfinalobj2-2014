@@ -11,7 +11,8 @@ public class Cliente {
 	private String direccion;
 	private CuentaCorriente cc;
 	private List<Venta> historialCompras;
-	
+
+
 	public Cliente(String nombre, Integer dni, String direccion){
 		this.setNombre(nombre);
 		this.setDni(dni);
@@ -22,11 +23,7 @@ public class Cliente {
 	}
 	
 	public void cargarPesosEnCC(Double monto){
-		this.getCc().actualizarCC(monto);
-	}
-	
-	public void cargarPedidosEnCCProductos(Pedido pedido){
-		this.getCc().actualizarCC(pedido);
+		this.getCc().actualizarCCconPlata(monto);
 	}
 	
 	//ACCESORS
@@ -62,6 +59,13 @@ public class Cliente {
 	public void setHistorialCompras(List<Venta> historialCompras) {
 		this.historialCompras = historialCompras;
 	}
+
+	public void efectuarDevolucionYcancelarCompra(Venta venta) {
+		this.getCc().actualizarCCconPedido(venta.getPedido());
+		this.historialCompras.remove(venta);
+		
+	}
+
 
 }
 
