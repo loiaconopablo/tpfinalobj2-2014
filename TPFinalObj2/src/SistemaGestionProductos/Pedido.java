@@ -11,10 +11,14 @@ public class Pedido {
 		this.setFichas(new ArrayList<Ficha>());
 	}
 
-	public Pedido(List<Ficha> listaFichas) {
-		this.setFichas(listaFichas);
-
+	public double getPrecio() {
+		double result = 0;
+		for(Ficha ficha :this.getFichas()){
+			result += ficha.precio();
+		}
+		return result;
 	}
+	
 	public void agregarFichaAlPedido(Ficha ficha){
 		this.fichas.add(ficha);//revisar
 	}
@@ -65,6 +69,11 @@ public class Pedido {
 		return fichas;
 	}
 
+	public Pedido(List<Ficha> listaFichas) {
+		this.setFichas(listaFichas);
+
+	}
+	
 	public void setFichas(List<Ficha> fichas) {
 		this.fichas = fichas;
 	}
@@ -73,4 +82,6 @@ public class Pedido {
 		return this.getFichas().get(getFichas().indexOf(ficha));
 		
 	}
+
+
 }

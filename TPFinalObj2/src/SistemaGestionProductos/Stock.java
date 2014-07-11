@@ -19,6 +19,10 @@ public class Stock {
 		}
 	}
 
+	public double aplicarDescuentoDeOfertaAlPedido(Pedido ped) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 	public void retornarPedidoAlStock(Pedido pedido){
 		this.agregarPedidoAlStock(pedido);
@@ -139,5 +143,8 @@ public class Stock {
 	public void setFichas(List<Ficha> fichas) {
 		this.fichas = fichas;
 	}
+
+
+	
 	
 }
