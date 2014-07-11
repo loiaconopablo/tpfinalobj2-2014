@@ -2,7 +2,7 @@ package SistemaGestionProductos;
 
 public class Probando {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws NoPuedeDescontarException {
 	    
 		Negocio coto = new Negocio("COTO");
 		coto.generarNuevaSucursal(0);
@@ -48,10 +48,13 @@ public class Probando {
 		perfumeria.agregarProducto(shampoo);
 		perfumeria.agregarProducto(desodorante);
 		
-		coto.nuevoCliente("Pablo", 30000500, "12 de Octubre");
-		coto.nuevoCliente("Juan Pablo", 30123100, "Av. Calchaqui");
-		coto.nuevoCliente("Charly", 28000123, "Amoedo");
-		coto.nuevoCliente("Pepe Luis", 1203110, "Lamadrid");
+		
+		Cliente pablo = new Cliente("Pablo", 30000500, "12 de Octubre");
+		Cliente juampi = new Cliente("Juan Pablo", 30123100, "Av. Calchaqui");
+		Cliente Charly = new Cliente("Charly", 28000123, "Amoedo");
+		Cliente pepe = new Cliente("Pepe Luis", 1203110, "Lamadrid");
+		coto.agregarCliente(pepe);coto.agregarCliente(Charly);coto.agregarCliente(Charly);
+		coto.agregarCliente(pablo);
 		
 		Pedido pedidoUno = new Pedido();
 		Pedido pedidoDos = new Pedido();
@@ -59,6 +62,7 @@ public class Probando {
 		pedidoUno.agregarPresentacionAlPedido(pepside330, 1500);
 		pedidoUno.agregarPresentacionAlPedido(peside1yMedio, 400);
 		pedidoUno.agregarPresentacionAlPedido(fernet500, 500);
+		pedidoUno.agregarPresentacionAlPedido(cocade3, 900);
 		pedidoUno.agregarPresentacionAlPedido(pepsie2, 700);
 		pedidoUno.agregarPresentacionAlPedido(cocade2, 700);
 		pedidoUno.agregarPresentacionAlPedido(manteca200, 2400);
@@ -76,6 +80,14 @@ public class Probando {
 		pedidoDos.setFichas(pedidoUno.getFichas());
 		coto.devolverSucural(0).agregarMercaderiaALaSucursal(pedidoUno);
 		coto.devolverSucural(1).agregarMercaderiaALaSucursal(pedidoDos);
+		
+		Pedido pedidoCliente = new Pedido();
+		pedidoCliente.agregarPresentacionAlPedido(cocade600, 1);
+		pedidoCliente.agregarPresentacionAlPedido(rexonaManChico, 2);
+		pedidoCliente.agregarPresentacionAlPedido(shampoChico, 1);
+		pedidoCliente.agregarPresentacionAlPedido(fernet500, 1);
+		
+		coto.devolverSucural(0).efectuarVentaComun(pedidoCliente, pablo);
 		
 		
 		

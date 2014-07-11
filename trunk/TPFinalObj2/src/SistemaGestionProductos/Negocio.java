@@ -32,6 +32,10 @@ public class Negocio {
 		return null;
 	}
 
+	public void agregarCliente(Cliente client){
+		this.getClientes().add(client);
+	}
+	
 	public void generarNuevaSucursal(int id){
 		Sucursal nuevaSucursal = new Sucursal(id, this);
 		this.getSucursales().add(nuevaSucursal);

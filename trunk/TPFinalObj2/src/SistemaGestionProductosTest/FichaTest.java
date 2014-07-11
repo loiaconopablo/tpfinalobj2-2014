@@ -4,32 +4,30 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.Mock.*;
+import org.mockito.Mockito.*;
 
 import SistemaGestionProductos.Ficha;
 import SistemaGestionProductos.Presentacion;
 
 public class FichaTest {
+	Presentacion p;
 	Ficha f;
 
 	@Before
 	public void setUp() {
-		Presentacion p = mock(Presentacion.class);
-		when(p.getPrecioVenta()).thenReturn(5.5);
+		Presentacion p = Mockito.mock(Presentacion.class);
+		Mockito.when(p.getPrecioVenta()).thenReturn(5.5);
 		f=new Ficha(p, 10);
-		
-		
+			
 	}
-
 
 	@Test
 	public void testFicha() {
 		assertEquals(f.getCantidad(), 10);
-		assertEquals(f.getPresentacion();p);
+		assertEquals(f.getPresentacion(),p);
 	}
-
-	
 
 	@Test
 	public void testPrecio() {
