@@ -9,6 +9,6 @@ public class VentaCC extends Venta {
 			this.setCliente(client);
 			this.setFechaDeVenta(new Date());
 			client.getCc().descontarPlata(pedido);
-		}
+	}
 
 }
