@@ -36,10 +36,49 @@ public class Negocio {
 		Sucursal nuevaSucursal = new Sucursal(id, ubicaciones, this);
 		this.getSucursales().add(nuevaSucursal);
 	}
-	public List<Venta> generarListadoDeVentas(){
+	public List<Venta> generarListadoDeVenta(){
 		List<Venta>result = new ArrayList<Venta>();
 		for(Sucursal sucu : this.getSucursales())
 			{result.addAll(sucu.getHistorialDeVentas());}
+		return result;
+	}
+	
+	public List<Venta>generarListadoVenta(Date desde, Date hasta){
+		List<Venta>result = new ArrayList<Venta>();
+		for(Sucursal sucu : this.getSucursales())
+		{result.addAll(sucu.generarListadoVenta(desde,hasta));}
+	return result;
+	}
+	
+	public List<Venta>generarListadoVenta(Date fecha){
+		List<Venta>result = new ArrayList<Venta>();
+		for(Sucursal sucu : this.getSucursales())
+		{result.addAll(sucu.generarListadoVenta(fecha));}
+	return result;
+	}
+	
+	public List<Venta>generarListadoVenta(double desde, double hasta){
+		List<Venta>result = new ArrayList<Venta>();
+		for(Sucursal sucu : this.getSucursales())
+		{result.addAll(sucu.generarListadoVenta(desde,hasta));}
+	return result;
+	}
+
+	public List<Double> montoCompradoPor(Cliente client){
+		List<Double> result = new ArrayList<Double>();
+		for(Venta venta : client.getHistorialCompras()){
+			result.add(venta.getPedido().getPrecio());
+		}
+		return result;
+	}
+	
+	public List<Double> montoCompradoPor(Cliente client, Date fecha){
+		List<Double> result = new ArrayList<Double>();
+		for(Venta venta : client.getHistorialCompras()){
+			if(format.format(venta.getFechaDeVenta())== format.format(fecha)){
+				result.add(venta.getPedido().getPrecio());
+			}
+		}
 		return result;
 	}
 	
@@ -82,19 +121,7 @@ public class Negocio {
 		this.caja = caja;
 	}
 	
-//	PARA COMPARAR FECHAS
-//	public static void main(String[] args) throws InterruptedException {
-//	    
-//	    SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-//	    Date a = new Date();
-//	    Thread.sleep(1000);
-//	    Date b = new Date();
-//	    boolean sas = ((format.format(a)).equalsIgnoreCase((format.format(b))));
-//	    System.out.println(format.format(a));
-//	    System.out.println(format.format(b));
-//	    System.out.println(sas);
-//	    
-//	  }
+
 
 	
 		
