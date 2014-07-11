@@ -32,8 +32,8 @@ public class Negocio {
 		return null;
 	}
 
-	public void generarNuevaSucursal(int id, List<Ubicacion>ubicaciones){
-		Sucursal nuevaSucursal = new Sucursal(id, ubicaciones, this);
+	public void generarNuevaSucursal(int id){
+		Sucursal nuevaSucursal = new Sucursal(id, this);
 		this.getSucursales().add(nuevaSucursal);
 	}
 	public List<Venta> generarListadoDeVenta(){

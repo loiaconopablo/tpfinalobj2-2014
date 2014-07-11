@@ -1,12 +1,13 @@
 package SistemaGestionProductos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Ubicacion {
 	
-	String fila;
-	String gondola;
-	List<Producto> productos;
+	private String fila;
+	private String gondola;
+	private List<Producto> productos;
 	
 	public Ubicacion (String fila, String gondola, List<Producto>productos){
 		
@@ -15,6 +16,12 @@ public class Ubicacion {
 		this.productos = productos;
 	}
 
+	public Ubicacion (String fila, String gondola){
+		
+		this.fila = fila;
+		this.gondola = gondola;
+		this.productos = new ArrayList<Producto>();
+	}
 	public String getFila() {
 		return fila;
 	}

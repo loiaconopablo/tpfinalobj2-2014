@@ -17,15 +17,19 @@ public class Sucursal {
 	private Negocio negocio;
 	private double caja;
 
-	public Sucursal(int id, List<Ubicacion>ubicaciones, Negocio negocio){
+	public Sucursal(int id, Negocio negocio){
 		
 		this.setNegocio(negocio);
 		this.stock = new Stock();
 		this.idSucursal = id;
-		this.ubicaciones = ubicaciones;
+		this.ubicaciones = new ArrayList<Ubicacion>();
 		this.setOfertas(new ArrayList<Oferta>());
 		this.setHistorialDeVentas(new ArrayList<Venta>());
 		this.setCaja(0);
+	}
+	
+	public void agregarUbicacion(Ubicacion ubicacion){
+		this.getUbicaciones().add(ubicacion);
 	}
 
 	public void agregarMercaderiaALaSucursal(Pedido pedido){
