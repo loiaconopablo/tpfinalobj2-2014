@@ -1,4 +1,5 @@
-package SistemaGestionProductos;
+package SistemaGestionEnvios;
+
 
 public class Cancelado extends EstadoDelEnvio {
 	String motivo;

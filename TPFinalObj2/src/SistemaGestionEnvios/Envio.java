@@ -1,6 +1,8 @@
-package SistemaGestionProductos;
+package SistemaGestionEnvios;
 
 import org.joda.time.DateTime;
+
+import SistemaGestionProductos.Venta;
 
 public class Envio {
 	Venta venta;
@@ -8,7 +10,7 @@ public class Envio {
 	DateTime fechadeenvio;
 	
 	
-	Envio(Venta venta){
+	public Envio(Venta venta){
 		
 		this.setFechadeenvio(new DateTime());
 		this.setVenta(venta);
