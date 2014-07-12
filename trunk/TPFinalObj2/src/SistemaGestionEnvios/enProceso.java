@@ -1,4 +1,4 @@
-package SistemaGestionProductos;
+package SistemaGestionEnvios;
 
 public class enProceso extends EstadoDelEnvio {
 Double cantAAbonar;

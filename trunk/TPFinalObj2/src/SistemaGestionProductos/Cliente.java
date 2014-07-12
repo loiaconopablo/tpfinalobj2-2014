@@ -4,6 +4,8 @@ package SistemaGestionProductos;
 import java.util.ArrayList;
 import java.util.List;
 
+import SistemaGestionVentas.Venta;
+
 public class Cliente {
 	
 	private String nombre;

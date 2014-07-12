@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import SistemaGestionVentas.Venta;
+
 public class Negocio {
 	
 	private SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");

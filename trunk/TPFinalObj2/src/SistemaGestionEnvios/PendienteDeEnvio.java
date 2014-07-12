@@ -1,4 +1,4 @@
-package SistemaGestionProductos;
+package SistemaGestionEnvios;
 
 public class PendienteDeEnvio extends EstadoDelEnvio {
 

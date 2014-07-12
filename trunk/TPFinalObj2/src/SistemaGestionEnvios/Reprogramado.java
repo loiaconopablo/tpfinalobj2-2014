@@ -1,7 +1,7 @@
 /**
  * 
  */
-package SistemaGestionProductos;
+package SistemaGestionEnvios;
 
 import org.joda.time.DateTime;
 

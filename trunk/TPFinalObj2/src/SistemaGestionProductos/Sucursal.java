@@ -6,6 +6,10 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
+import SistemaGestionVentas.Venta;
+import SistemaGestionVentas.VentaCC;
+import SistemaGestionVentas.VentaDirecta;
+
 public class Sucursal {
 
 	private SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");

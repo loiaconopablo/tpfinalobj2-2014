@@ -17,8 +17,8 @@ public class ClienteTest {
 
 	@Test
 	public void testCliente() {
-		assertTrue(aux.getNombre().equals("Timoteo Griguol"));
-		assertTrue(aux.getDireccion().equals("Diagonal 42"));
+		assertEquals(aux.getNombre(),"Timoteo Griguol");
+		assertEquals(aux.getDireccion(),"Diagonal 42");
 		assertEquals(2222222,aux.getDni());
 		
 	}

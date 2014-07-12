@@ -1,6 +1,9 @@
-package SistemaGestionProductos;
+package SistemaGestionVentas;
 
 import java.util.Date;
+
+import SistemaGestionProductos.Cliente;
+import SistemaGestionProductos.Pedido;
 
 public class VentaDirecta extends Venta {
 	
