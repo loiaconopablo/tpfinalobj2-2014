@@ -2,7 +2,7 @@ package SistemaGestionEnvios;
 
 import org.joda.time.DateTime;
 
-import SistemaGestionProductos.Venta;
+import SistemaGestionVentas.Venta;
 
 public class Envio {
 	Venta venta;
