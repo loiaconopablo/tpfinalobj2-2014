@@ -4,8 +4,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
+import org.mockito.*;
 
 import SistemaGestionProductos.Cliente;
+import SistemaGestionProductos.CuentaCorriente;
 
 public class ClienteTest {
 	Cliente aux;
@@ -37,13 +40,24 @@ public class ClienteTest {
 	}
 
 	@Test
-	public void testGetCc() {
-		fail("Not yet implemented");
+	public void testGetCcVacia() {
+		Double aux1=0.0;
+		assertEquals(aux1,aux.getCc().getMonto());
+	}
+	
+	@Test
+	public void testGetCcConDinero(){
+		aux.getCc().actualizarCCconPlata(20.2);
+		Double aux1=20.2;
+		assertEquals(aux1,aux.getCc().getMonto());
+		
 	}
 
 	@Test
 	public void testSetCc() {
-		fail("Not yet implemented");
+		CuentaCorriente ccaux=Mockito.mock(CuentaCorriente.class);	
+		aux.setCc(ccaux);
+		assertEquals(ccaux,aux.getCc());	
 	}
 
 	@Test

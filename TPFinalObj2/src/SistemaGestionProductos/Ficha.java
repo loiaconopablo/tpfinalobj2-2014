@@ -4,7 +4,8 @@ public class Ficha {
 	
 	private Presentacion objeto;
 	private int cantidad;
-	private double precio;
+	private Double precio;
+
 
 
 
@@ -18,9 +19,14 @@ public class Ficha {
 		return objeto;
 	}
 	public void calcularPrecio(){
-		this.setPrecio(this.getCantidad()*this.getPresentacion().getPrecioVenta());
+	this.setPrecio(this.getCantidad()*this.getPresentacion().getPrecioVenta());
 	}
 	
+	public void setPrecio(Double d) {
+		precio=d;
+		
+	}
+
 	public void aumentarCant(int cantidad){
 		this.setCantidad(this.getCantidad()+ cantidad);
 		this.calcularPrecio();
@@ -54,13 +60,11 @@ public class Ficha {
 		return this.getCantidad()>ficha.getCantidad();
 	}
 	
-	public double getPrecio() {
-		return precio;
+	public Double getPrecio() {
+		return this.precio;
 	}
 
-	public void setPrecio(double precio) {
-		this.precio = precio;
-	}
+	
 
 	public Presentacion getObjeto() {
 		return objeto;

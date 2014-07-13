@@ -17,7 +17,7 @@ public class FichaTest {
 
 	@Before
 	public void setUp() {
-		Presentacion p = Mockito.mock(Presentacion.class);
+		 p = Mockito.mock(Presentacion.class);
 		Mockito.when(p.getPrecioVenta()).thenReturn(5.5);
 		f=new Ficha(p, 10);
 			
@@ -31,7 +31,8 @@ public class FichaTest {
 
 	@Test
 	public void testPrecio() {
-		fail("Not yet implemented");
+		Double daux=55.0;
+		assertEquals(daux,f.getPrecio());
 	}
 
 	@Test
@@ -49,14 +50,22 @@ public class FichaTest {
 
 	@Test
 	public void testTienePresentacion() {
-		fail("Not yet implemented");
+		assertTrue(f.tienePresentacion(p));
 	}
 
 	
 
 	@Test
-	public void testVerificarCantidadPresentacion() {
-		fail("Not yet implemented");
+	public void testVerificarCantidadPresentacionMenor() {
+		Ficha faux=Mockito.mock(Ficha.class);
+		Mockito.when(faux.getCantidad()).thenReturn(8);
+		assertTrue(f.verificarCantidadPresentacion(faux));
+	}
+	@Test
+	public void testVerificarCantidadPresentacionMayor() {
+		Ficha faux=Mockito.mock(Ficha.class);
+		Mockito.when(faux.getCantidad()).thenReturn(12);
+		assertFalse(f.verificarCantidadPresentacion(faux));
 	}
 
 }
