@@ -7,9 +7,8 @@ import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 import org.mockito.Mock.*;
-import org.mockito.Mockito.*;
+import org.mockito.Mockito;
 
 import SistemaGestionProductos.Presentacion;
 import SistemaGestionProductos.Producto;
@@ -28,8 +27,6 @@ public class UbicacionTest {
 		productos = new ArrayList<Producto>();
 		uAux = new Ubicacion("1b", "2", productos);
 		p = Mockito.mock(Producto.class);
-		//p = Mockito.mock(Presentacion.class);
-		//Mockito.when(p.getPrecioVenta()).thenReturn(5.5);
 		
 	}
 	
@@ -53,12 +50,12 @@ public class UbicacionTest {
 		u.agregarProducto(p);
 		assertTrue(u.getProductos().contains(p));
 	}
-	
+	@Test
 	public void testSacarProducto(){
 		u.sacarProducto(p);
 		assertFalse(u.getProductos().contains(p));
 	}
-	
+	@Test
 	public void testEstaElProducto(){
 		u.agregarProducto(p);
 		assertTrue(u.estaElProducto(p));
