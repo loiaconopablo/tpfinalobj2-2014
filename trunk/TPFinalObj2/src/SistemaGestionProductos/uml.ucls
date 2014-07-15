@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.6" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="SistemaGestionProductos.Cancelado" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/Cancelado.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="123" width="165" x="1682" y="544"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="SistemaGestionProductos.Cliente" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/Cliente.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="180" width="271" x="955" y="890"/>    
+    <display autosize="false" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="SistemaGestionProductos.CuentaCorriente" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/CuentaCorriente.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="159" width="200" x="955" y="1377"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="SistemaGestionProductos.Sucursal" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/Sucursal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="467" width="342" x="655" y="37"/>    
+    <display autosize="false" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="SistemaGestionProductos.Negocio" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/Negocio.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="306" width="346" x="880" y="544"/>    
+    <display autosize="false" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="SistemaGestionProductos.Pedido" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/Pedido.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="196" width="277" x="638" y="890"/>    
+    <display autosize="false" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="SistemaGestionProductos.Oferta" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/Oferta.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="145" width="228" x="296" y="544"/>    
+    <display autosize="false" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="SistemaGestionProductos.EstadoDelEnvio" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/EstadoDelEnvio.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="105" width="166" x="1787" y="37"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="SistemaGestionProductos.Enviado" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/Enviado.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="69" width="165" x="2105" y="544"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="SistemaGestionProductos.PendienteDeEnvio" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/PendienteDeEnvio.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="69" width="165" x="1477" y="544"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="SistemaGestionProductos.Reprogramado" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/Reprogramado.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="105" width="178" x="1887" y="544"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="SistemaGestionProductos.Venta" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/Venta.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="195" width="171" x="1266" y="544"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="SistemaGestionProductos.VentaADomicilio" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/VentaADomicilio.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="69" width="178" x="1652" y="890"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="SistemaGestionProductos.VentaCC" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/VentaCC.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="143" x="1266" y="890"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="SistemaGestionProductos.VentaDirecta" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/VentaDirecta.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="163" x="1449" y="890"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="SistemaGestionProductos.Stock" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/Stock.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="187" width="276" x="564" y="544"/>    
+    <display autosize="false" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="SistemaGestionProductos.Ficha" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/Ficha.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="182" width="259" x="564" y="1377"/>    
+    <display autosize="false" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="SistemaGestionProductos.Presentacion" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/Presentacion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="341" width="337" x="297" y="1599"/>    
+    <display autosize="false" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="SistemaGestionProductos.Producto" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/Producto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="447" width="267" x="276" y="890"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="SistemaGestionProductos.NoPuedeDescontarException" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/NoPuedeDescontarException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="190" x="233" y="37"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="SistemaGestionProductos.Ubicacion" project="TPFinalObj2" 
+    file="/TPFinalObj2/src/SistemaGestionProductos/Ubicacion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="267" width="215" x="41" y="544"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="22">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="23">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="24" name="ubicaciones"/>      
+      <multiplicity id="25" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="26">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <association id="27">    
+    <bendpoint x="306" y="1377"/>    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="28" name="producto"/>      
+      <multiplicity id="29" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="30">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="31" name="productos"/>      
+      <multiplicity id="32" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="33">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="34" name="historialCompras"/>      
+      <multiplicity id="35" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="36">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <association id="37">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="38" name="cliente"/>      
+      <multiplicity id="39" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="40">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="41" name="productos"/>      
+      <multiplicity id="42" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="43">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="44" name="sucursales"/>      
+      <multiplicity id="45" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="46">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="47" name="objeto"/>      
+      <multiplicity id="48" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="49">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="50" name="negocio"/>      
+      <multiplicity id="51" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="52">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="53" name="cc"/>      
+      <multiplicity id="54" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="55">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="56" name="fichas"/>      
+      <multiplicity id="57" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="58">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="59">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <generalization id="60">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="61">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="62" name="pedido"/>      
+      <multiplicity id="63" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="64">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="65" name="historialDeVentas"/>      
+      <multiplicity id="66" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="67">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="68" name="clientes"/>      
+      <multiplicity id="69" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="70">    
+    <bendpoint x="285" y="1377"/>    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="71" name="presentaciones"/>      
+      <multiplicity id="72" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="73">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="74" name="ofertas"/>      
+      <multiplicity id="75" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="76">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="77" name="stock"/>      
+      <multiplicity id="78" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="79">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <association id="80">    
+    <bendpoint x="573" y="890"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="81" name="fichas"/>      
+      <multiplicity id="82" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

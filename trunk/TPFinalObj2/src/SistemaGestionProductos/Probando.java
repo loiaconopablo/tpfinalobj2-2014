@@ -88,6 +88,7 @@ public class Probando {
 		pedidoCliente.agregarPresentacionAlPedido(fernet500, 1);
 		
 		coto.devolverSucural(0).efectuarVentaComun(pedidoCliente, pablo);
+		System.out.println(coto.devolverSucural(0).getCaja());
 		
 		
 		
