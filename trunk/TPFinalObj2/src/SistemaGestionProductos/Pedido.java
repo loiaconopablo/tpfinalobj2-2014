@@ -11,8 +11,8 @@ public class Pedido {
 		this.setFichas(new ArrayList<Ficha>());
 	}
 
-	public double getPrecio() {
-		double result = 0;
+	public Double getPrecio() {
+		Double result = 0.0;
 		for(Ficha ficha :this.getFichas()){
 			result += ficha.getPrecio();
 		}
