@@ -1,6 +1,6 @@
 package SistemaGestionVentas;
 
-import java.util.Date;
+import org.joda.time.DateTime;
 
 import SistemaGestionProductos.Cliente;
 import SistemaGestionProductos.Pedido;
@@ -9,7 +9,7 @@ public abstract class Venta {
 	
 	
 	private Cliente cliente;
-	private Date fechaDeVenta;
+	private DateTime fechaDeVenta;
 	private Pedido pedido;
 
 	public Cliente getCliente() {
@@ -20,11 +20,11 @@ public abstract class Venta {
 		this.cliente = cliente;
 	}
 
-	public Date getFechaDeVenta() {
+	public DateTime getFechaDeVenta() {
 		return fechaDeVenta;
 	}
 
-	public void setFechaDeVenta(Date fechaDeVenta) {
+	public void setFechaDeVenta(DateTime fechaDeVenta) {
 		this.fechaDeVenta = fechaDeVenta;
 	}
 

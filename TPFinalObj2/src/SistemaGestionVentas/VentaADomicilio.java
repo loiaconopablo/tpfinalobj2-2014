@@ -1,6 +1,6 @@
 package SistemaGestionVentas;
 
-import java.util.Date;
+import org.joda.time.DateTime;
 
 import SistemaGestionEnvios.Envio;
 import SistemaGestionProductos.Cliente;
@@ -13,7 +13,7 @@ public class VentaADomicilio extends Venta{
 	public VentaADomicilio (Cliente client, Pedido pedido){
 		this.setPedido(pedido);
 		this.setCliente(client);
-		this.setFechaDeVenta(new Date());
+		this.setFechaDeVenta(new DateTime());
 		this.envio = new Envio(this);
 	}
 	

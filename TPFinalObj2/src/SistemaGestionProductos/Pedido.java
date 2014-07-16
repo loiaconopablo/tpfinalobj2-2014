@@ -42,7 +42,7 @@ public class Pedido {
 		boolean result = false;
 		for (Ficha fichaInterna : this.getFichas()) {
 			if (fichaInterna.getPresentacion() == ficha.getPresentacion()
-					& fichaInterna.getCantidad() >= ficha.getCantidad()) {
+					&& fichaInterna.getCantidad() >= ficha.getCantidad()) {
 				result = true;
 			}
 		}
