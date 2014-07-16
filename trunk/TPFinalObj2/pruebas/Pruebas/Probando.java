@@ -1,4 +1,12 @@
-package SistemaGestionProductos;
+package Pruebas;
+
+import SistemaGestionProductos.Cliente;
+import SistemaGestionProductos.Negocio;
+import SistemaGestionProductos.NoPuedeDescontarException;
+import SistemaGestionProductos.Pedido;
+import SistemaGestionProductos.Presentacion;
+import SistemaGestionProductos.Producto;
+import SistemaGestionProductos.Ubicacion;
 
 public class Probando {
 	

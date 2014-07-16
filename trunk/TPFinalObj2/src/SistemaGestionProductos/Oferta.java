@@ -37,8 +37,8 @@ public class Oferta {
 		for (Ficha ficha : pedido.getFichas()) {
 			if (this.getProductos().contains(
 					ficha.getPresentacion().getProducto())) {
-				ficha.setPrecio(ficha.getPrecio()
-						- ((ficha.getPrecio() * this.getPorcentajeDescuento()) / 100));
+				ficha.setPrecio((ficha.getPrecio()
+						- ((ficha.getPrecio() * this.getPorcentajeDescuento()) / 100)));
 			}
 		}
 	}
