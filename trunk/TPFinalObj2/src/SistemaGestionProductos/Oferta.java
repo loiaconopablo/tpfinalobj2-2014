@@ -6,13 +6,14 @@ import java.util.List;
 public class Oferta {
 
 	private List<Producto> productos;
-	private int porcentajeDescuento;
+	private Double porcentajeDescuento;
 
-	public Oferta(int porcentaje) {
+	public Oferta(Double porcentaje) {
 		this.setProductos(new ArrayList<Producto>());
 		this.setPorcentajeDescuento(porcentaje);
 	}
 
+	
 	public List<Producto> getProductos() {
 		return productos;
 	}
@@ -21,11 +22,11 @@ public class Oferta {
 		this.productos = productos;
 	}
 
-	public int getPorcentajeDescuento() {
+	public Double getPorcentajeDescuento() {
 		return porcentajeDescuento;
 	}
 
-	public void setPorcentajeDescuento(int porcentajeDescuento) {
+	public void setPorcentajeDescuento(Double porcentajeDescuento) {
 		this.porcentajeDescuento = porcentajeDescuento;
 	}
 
@@ -37,10 +38,13 @@ public class Oferta {
 		for (Ficha ficha : pedido.getFichas()) {
 			if (this.getProductos().contains(
 					ficha.getPresentacion().getProducto())) {
+
+				ficha.setPrecio(ficha.getPrecio()
+						- ((ficha.getPrecio() * this.getPorcentajeDescuento()) ));
+
 				ficha.setPrecio((ficha.getPrecio()
 						- ((ficha.getPrecio() * this.getPorcentajeDescuento()) / 100)));
 			}
 		}
 	}
-
 }
