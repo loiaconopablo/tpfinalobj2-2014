@@ -96,15 +96,7 @@ public class Producto {
 		// TODO Auto-generated method stub
 		return this.marca;
 	}
-	public boolean equals(Producto p){
-		//No se compara la descripcion
-		return     this.getNombre().equals(p.getNombre()) 
-				&& this.esDeMiTipo(p.getTipo()) 
-				&& this.getUnidadMedida().equals(p.getUnidadMedida())
-				&& this.getMarca().equals(p.getMarca());
-				
-	}
-	
+
 }
 
 

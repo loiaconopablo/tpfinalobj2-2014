@@ -21,17 +21,18 @@ public class ProductoTest {
 
 	@Test
 	public void testProducto() {
-		assertTrue(aux.getDescripcion().equals("la mejor yerba del mercado"));
-		assertTrue(aux.getNombre().equals("Playadito Suave"));
-		assertTrue(aux.getTipo().equals("Yerba Mate"));
-		assertTrue(aux.getUnidadMedida().equals("gramos"));
-		assertTrue(aux.getMarca().equals("Playadito"));
+		assertEquals("la mejor yerba del mercado",aux.getDescripcion());
+		assertEquals("Playadito Suave",aux.getNombre());
+		assertEquals("Yerba Mate",aux.getTipo());
+		assertEquals("gramos",aux.getUnidadMedida());
+		assertEquals("Playadito",aux.getMarca());
 				
 	}
 
 	@Test
 	public void testTengoPresentacion() {
-		assertTrue(aux.getPresentaciones().contains(aux1));
+		aux.agregarPresentacion(aux1);
+		assertTrue(aux.tengoPresentacion(aux1));
 	}
 
 	@Test
