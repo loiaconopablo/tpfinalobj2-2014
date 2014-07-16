@@ -19,7 +19,7 @@ public class Ficha {
 		return objeto;
 	}
 	public void calcularPrecio(){
-	this.setPrecio(this.getCantidad()*this.getPresentacion().getPrecioVenta());
+	this.setPrecio(this.getCantidad()*(this.getPresentacion().getPrecioVenta()));
 	}
 	
 	public void setPrecio(Double d) {
