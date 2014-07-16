@@ -13,16 +13,15 @@ public class Presentacion {
 	private Producto producto;
 	private List<Double>precioHistorico ;
 	
-	public Presentacion(String codDeBarras, int stockMin, int StockCri, double precioVta, double precioCmp, Producto produc,Integer cantDeUnidadDeMedida){
+	public Presentacion(String codDeBarras, int stockMin, int StockCri, Double precioVta, Double precioCmp, Producto produc,Integer cantDeUnidadDeMedida){
 		this.setCodDebarras(codDeBarras);
 		this.setCantDeUnidadDeMedida(cantDeUnidadDeMedida);
 		this.setStockMinimo(stockMin);
 		this.setStockCritico(StockCri);
+		this.setPrecioHistorico(new ArrayList<Double>());
 		this.setPrecioVenta(precioVta);
 		this.setPrecioCompra(precioCmp);
 		this.setProducto(produc);
-		this.setPrecioHistorico(new ArrayList<Double>());
-		this.precioHistorico.add(this.getPrecioVenta());
 		produc.agregarPresentacion(this);
 	}
 	
@@ -44,7 +43,7 @@ public class Presentacion {
 	
 	// ACCESORS
 	
-	public double getPrecioVenta() {
+	public Double getPrecioVenta() {
 		return precioVenta;
 	}
 
@@ -72,7 +71,7 @@ public class Presentacion {
 		this.stockCritico = stockCritico;
 	}
 
-	public double getPrecioCompra() {
+	public Double getPrecioCompra() {
 		return precioCompra;
 	}
 
@@ -98,6 +97,7 @@ public class Presentacion {
 
 	public void setPrecioVenta(double precioVenta) {
 		this.precioVenta = precioVenta;
+		this.precioHistorico.add(this.getPrecioVenta());
 	}
 
 
