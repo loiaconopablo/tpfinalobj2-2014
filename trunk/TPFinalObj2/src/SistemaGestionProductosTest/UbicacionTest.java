@@ -27,7 +27,7 @@ public class UbicacionTest {
 		productos = new ArrayList<Producto>();
 		uAux = new Ubicacion("1b", "2", productos);
 		p = Mockito.mock(Producto.class);
-		
+	
 	}
 	
 	@Test

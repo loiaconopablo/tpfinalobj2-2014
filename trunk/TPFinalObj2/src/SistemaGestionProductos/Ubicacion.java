@@ -11,9 +11,9 @@ public class Ubicacion {
 	
 	public Ubicacion (String fila, String gondola, List<Producto>productos){
 		
-		this.fila = fila;
-		this.gondola = gondola;
-		this.productos = productos;
+		this.setFila(fila);
+		this.setGondola(gondola);
+		this.setProductos(productos);
 	}
 
 	public Ubicacion (String fila, String gondola){
