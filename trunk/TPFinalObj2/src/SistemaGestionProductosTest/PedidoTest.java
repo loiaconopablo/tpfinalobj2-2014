@@ -85,12 +85,17 @@ public class PedidoTest {
 
 	@Test
 	public void testPedidoListOfFicha() {
-		fail("Not yet implemented");
+		ArrayList<Ficha> arrayfichas= new ArrayList<Ficha>();
+		arrayfichas.add(auxficha);
+		arrayfichas.add(auxficha2);
+		auxpedido=new Pedido(arrayfichas);
+		assertEquals(arrayfichas,auxpedido.getFichas());
 	}
 
 	@Test
 	public void testSetFichas() {
 		ArrayList<Ficha> arrayfichas= new ArrayList<Ficha>();
+		arrayfichas.add(auxficha);
 		auxpedido.setFichas(arrayfichas);
 		assertEquals(arrayfichas,auxpedido.getFichas());
 	}
