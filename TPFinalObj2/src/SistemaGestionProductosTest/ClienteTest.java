@@ -12,6 +12,7 @@ import SistemaGestionProductos.CuentaCorriente;
 
 public class ClienteTest {
 	Cliente aux;
+	
 	@Before
 	public void setUp() throws Exception {
 	aux= new Cliente("Timoteo Griguol", 2222222, "Diagonal 42");
