@@ -6,6 +6,8 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
+import org.joda.time.DateTime;
+
 import SistemaGestionVentas.Venta;
 import SistemaGestionVentas.VentaCC;
 import SistemaGestionVentas.VentaDirecta;
@@ -99,18 +101,18 @@ public class Sucursal {
 		//Aca tiene que ir la logica de los envios y demas
 	}
 	
-	public List<Venta> generarListadoVenta(Date desde, Date hasta) {
+	public List<Venta> generarListadoVenta(DateTime desde, DateTime hasta) {
 		List<Venta>result = new ArrayList<Venta>();
 		for(Venta vent : this.getHistorialDeVentas())
-		{if(vent.getFechaDeVenta().after(desde) && vent.getFechaDeVenta().before(hasta))
+		{if(vent.getFechaDeVenta().isAfter(desde) && vent.getFechaDeVenta().isBefore(hasta))
 			result.add(vent);}
 	return result;
 	}
 	
-	public List<Venta> generarListadoVenta(Date fecha) {
+	public List<Venta> generarListadoVenta(DateTime fecha) {
 		List<Venta>result = new ArrayList<Venta>();
 		for(Venta vent : this.getHistorialDeVentas())
-		{if(format.format(vent.getFechaDeVenta()) == format.format(fecha))
+		{if(vent.getFechaDeVenta() == fecha)
 			result.add(vent);}
 	return result;
 	}
