@@ -9,14 +9,17 @@ Double cantAAbonar;
     }
 	private void setCantAAbonar(Double cantAbonar) {
 		this.cantAAbonar=cantAbonar;
-		
-
+	}
+	
+	public Double getCantAAbonar(){
+		return this.cantAAbonar;
+	}
 	
 
-}
+
 	@Override
 	void procesarEstadoActual() {
-		if (this.getEnvio().getFechadeenvio().isAfterNow()){
+		if (this.getEnvio().getFechadeenvio().isBeforeNow()){
 		
 			this.getEnvio().envioEntregado();
 		}
