@@ -28,8 +28,8 @@ public class OfertaTest {
 	public void setUp() throws Exception {
 		oferta = new Oferta(10);
 		p = Mockito.mock(Producto.class);
-		presentacionDos= new Presentacion("",0,0,20,0,p,0);
-		presentacionUno= new Presentacion("",0,0,100,0,p,0);
+		presentacionDos= new Presentacion("",0,0,(double) 20,(double)0,p,0);
+		presentacionUno= new Presentacion("",0,0,(double)100,(double)0,p,0);
 		f = new Ficha(presentacionUno,1);
 		fi = new Ficha(presentacionDos,1);
 		pedido = Mockito.mock(Pedido.class);

@@ -1,4 +1,4 @@
-package SistemaGestionTest;
+package SistemaGestionProductosTest;
 
 import static org.junit.Assert.*;
 
