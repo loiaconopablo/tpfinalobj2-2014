@@ -66,47 +66,47 @@ public class StockTest {
 	@Test
 	public void testAgregarPedidoAlStock() {
 		stock.agregarPedidoAlStock(ped);
-		assertTrue(stock.getFichas().size()>2);
+		assertTrue(stock.getFichas().size()==2);
 	}
 
-	@Test
-	public void testGenerarPedidoEnStock() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGenerarPedidoSinStock() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGenerarPresentacionesEnEstadoCritico() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGenerarPresentacionesEnEstadoMinimo() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testHayStock() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testDescontarFichaAlStock() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testDescontarPedidoDelStock() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testVerificarStock() {
-		fail("Not yet implemented");
-	}
+//	@Test
+//	public void testGenerarPedidoEnStock() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testGenerarPedidoSinStock() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testGenerarPresentacionesEnEstadoCritico() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testGenerarPresentacionesEnEstadoMinimo() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testHayStock() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testDescontarFichaAlStock() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testDescontarPedidoDelStock() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testVerificarStock() {
+//		fail("Not yet implemented");
+//	}
 
 }
