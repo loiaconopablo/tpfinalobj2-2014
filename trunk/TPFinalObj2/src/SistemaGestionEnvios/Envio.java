@@ -76,6 +76,9 @@ public class Envio {
 		
 	}
 	
-	
+	public void procesarEnvio(){
+		
+		this.getEstadointerno().procesarEstadoActual();
+	}
 
 }
