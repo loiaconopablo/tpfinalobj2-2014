@@ -19,7 +19,7 @@ public class Envio {
 
 
 	//Getters y Setters 
-	Venta getVenta() {
+	public Venta getVenta() {
 		return venta;
 	}
 
@@ -31,7 +31,7 @@ public class Envio {
 
 
 
-	EstadoDelEnvio getEstadointerno() {
+	public EstadoDelEnvio getEstadointerno() {
 		return estadointerno;
 	}
 
@@ -43,7 +43,7 @@ public class Envio {
 
 
 
-	DateTime getFechadeenvio() {
+	public DateTime getFechadeenvio() {
 		return fechadeenvio;
 	}	
 
@@ -55,18 +55,18 @@ public class Envio {
 	
 	//Metodos para manejo de estado
 	
-	void resetearEstadoEnvio(){
+	public void resetearEstadoEnvio(){
 		this.setEstadointerno(new PendienteDeEnvio(this));
 	}
-	void cancelarEnvio(String motivo){
+	public void cancelarEnvio(String motivo){
 		this.setEstadointerno(new Cancelado(motivo,this));
 		
 	}
 	
-	void reprogramarEnvio(DateTime nuevaFecha){
+	public void reprogramarEnvio(DateTime nuevaFecha){
 		this.setEstadointerno(new Reprogramado(nuevaFecha,this));
 	}
-	void envioEnProceso(Double cantAPagar){
+	public void envioEnProceso(Double cantAPagar){
 		this.setEstadointerno(new enProceso(cantAPagar,this));
 	}
 

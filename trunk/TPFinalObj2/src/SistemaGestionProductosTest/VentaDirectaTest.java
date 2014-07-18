@@ -33,9 +33,5 @@ public class VentaDirectaTest {
 		assertEquals(fecha.getDayOfYear(),ventaAux.getFechaDeVenta().getDayOfYear());
 	}
 
-	@Test
-	public void testDebePagarDiferencia() {
-		fail("Not yet implemented");
-	}
 
 }

@@ -1,6 +1,6 @@
 package SistemaGestionEnvios;
 
-abstract class  EstadoDelEnvio {
+public abstract class  EstadoDelEnvio {
 	Envio enviorelacionado;
 	
 	EstadoDelEnvio(Envio envio){
