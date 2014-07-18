@@ -1,10 +1,13 @@
 package SistemaGestionProductos;
 
-public class probando2{}
-	
-	
-	/*    
-		Negocio coto = new Negocio("COTO");
+public class Probando2 {
+	  
+	    public static void main(String[] args) throws NoPuedeDescontarException {
+			
+		
+		Negocio coto;
+		
+	    coto = new Negocio("COTO");
 		coto.generarNuevaSucursal(0);
 		coto.generarNuevaSucursal(1);
 		Ubicacion lacteos = new Ubicacion("L", "Lacteos");
@@ -90,6 +93,5 @@ public class probando2{}
 		coto.devolverSucural(0).efectuarVentaComun(pedidoCliente, pablo);
 		System.out.println(coto.devolverSucural(0).getCaja());
 	
-	
-	
-*/
+	    }
+}

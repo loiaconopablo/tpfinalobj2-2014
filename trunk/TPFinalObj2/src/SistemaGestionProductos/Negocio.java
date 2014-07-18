@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.joda.time.DateTime;
+
 import SistemaGestionVentas.Venta;
 
 public class Negocio {
@@ -38,8 +40,8 @@ public class Negocio {
 		this.getClientes().add(client);
 	}
 	
-	public void generarNuevaSucursal(int id){
-		Sucursal nuevaSucursal = new Sucursal(id, this);
+	public void generarNuevaSucursal(int id_suc){
+		Sucursal nuevaSucursal = new Sucursal(id_suc, this);
 		this.getSucursales().add(nuevaSucursal);
 	}
 	public List<Venta> generarListadoDeVenta(){
@@ -49,14 +51,14 @@ public class Negocio {
 		return result;
 	}
 	
-	public List<Venta>generarListadoVenta(Date desde, Date hasta){
+	public List<Venta>generarListadoVenta(DateTime desde, DateTime hasta){
 		List<Venta>result = new ArrayList<Venta>();
 		for(Sucursal sucu : this.getSucursales())
 		{result.addAll(sucu.generarListadoVenta(desde,hasta));}
 	return result;
 	}
 	
-	public List<Venta>generarListadoVenta(Date fecha){
+	public List<Venta>generarListadoVenta(DateTime fecha){
 		List<Venta>result = new ArrayList<Venta>();
 		for(Sucursal sucu : this.getSucursales())
 		{result.addAll(sucu.generarListadoVenta(fecha));}
