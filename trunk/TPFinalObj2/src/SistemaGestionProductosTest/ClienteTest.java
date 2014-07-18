@@ -2,13 +2,15 @@ package SistemaGestionProductosTest;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 import org.mockito.*;
 
 import SistemaGestionProductos.Cliente;
 import SistemaGestionProductos.CuentaCorriente;
+import SistemaGestionVentas.Venta;
 
 public class ClienteTest {
 	Cliente aux;
@@ -63,12 +65,15 @@ public class ClienteTest {
 
 	@Test
 	public void testGetHistorialCompras() {
-		fail("Not yet implemented");
+		assertEquals(new ArrayList<Venta>(), aux.getHistorialCompras());
 	}
 
 	@Test
 	public void testSetHistorialCompras() {
-		fail("Not yet implemented");
+		ArrayList <Venta> list = new ArrayList<Venta>();
+		aux.setHistorialCompras(list);
+		assertEquals(list, aux.getHistorialCompras());
 	}
+
 
 }

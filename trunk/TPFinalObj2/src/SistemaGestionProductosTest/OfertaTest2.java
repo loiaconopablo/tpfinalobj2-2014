@@ -18,7 +18,7 @@ public class OfertaTest2 {
 
 	@Before
 	public void setUp() throws Exception {
-		Double auxDouble=22.00;
+		int auxDouble=22;
 		auxoferta= new Oferta(auxDouble);
 		auxProducto=mock(Producto.class);
 		
@@ -26,7 +26,7 @@ public class OfertaTest2 {
 
 	@Test
 	public void testOferta() {
-		Double auxDouble1= 22.0;
+		int auxDouble1= 22;
 		assertEquals(auxDouble1,auxoferta.getPorcentajeDescuento());
 		assertTrue(auxoferta.getProductos().isEmpty());
 	}
@@ -38,11 +38,11 @@ public class OfertaTest2 {
 	assertTrue(auxoferta.getProductos().contains(auxProducto));
 	}
 
-	@Test
-	public void testAplicarDescuentos() {
-		
-		
-	}
+//	@Test
+//	public void testAplicarDescuentos() {
+//		
+//		
+//	}
 
 
 }

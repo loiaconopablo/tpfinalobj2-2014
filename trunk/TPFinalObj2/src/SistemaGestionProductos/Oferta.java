@@ -6,9 +6,9 @@ import java.util.List;
 public class Oferta {
 
 	private List<Producto> productos;
-	private Double porcentajeDescuento;
+	private int porcentajeDescuento;
 
-	public Oferta(Double porcentaje) {
+	public Oferta(int porcentaje) {
 		this.setProductos(new ArrayList<Producto>());
 		this.setPorcentajeDescuento(porcentaje);
 	}
@@ -22,12 +22,12 @@ public class Oferta {
 		this.productos = productos;
 	}
 
-	public Double getPorcentajeDescuento() {
+	public int getPorcentajeDescuento() {
 		return porcentajeDescuento;
 	}
 
-	public void setPorcentajeDescuento(Double porcentajeDescuento) {
-		this.porcentajeDescuento = porcentajeDescuento;
+	public void setPorcentajeDescuento(int porcentaje) {
+		this.porcentajeDescuento = porcentaje;
 	}
 
 	public void agregarProductoAlaOferta(Producto product) {
