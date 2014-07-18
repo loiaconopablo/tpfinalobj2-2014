@@ -7,7 +7,12 @@ import java.util.List;
 
 public class Stock {
 	
-	private List<Ficha>fichas = new ArrayList<Ficha>();
+	private List<Ficha>fichas;
+	
+	
+	public Stock(){
+		this.setFichas(new ArrayList<Ficha>());
+	}
 	
 	//chequea si la ficha esta,si esta, aumenta la cantidad, sino esta agrega la ficha a la lista.
 	public void agregarFichaAlStock(Ficha ficha){
@@ -68,11 +73,13 @@ public class Stock {
 	
 	private boolean contienePresentencion(Ficha ficha) {
 		boolean result = false;
-		for(Ficha fic : this.getFichas()){
-			if(	fic.getPresentacion() == ficha.getPresentacion()){
-				result = true;
-				break;}
-			}
+		if(!(this.getFichas().size()==0)){
+			for(Ficha fic : this.getFichas()){
+				if(	fic.getPresentacion() == ficha.getPresentacion()){
+					result = true;
+					break;}
+				}
+		}
 		return result;
 	}
 	
